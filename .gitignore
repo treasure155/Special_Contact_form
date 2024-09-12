@@ -1,1 +1,46 @@
-/.DS_Store
+# Node.js dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids/
+*.pid
+*.pid.lock
+lib-cov/
+
+# Directory for exported files (e.g., PDFs, Excel files)
+exports/
+
+# Environment variables
+.env
+
+# Optional npm cache directory
+.npm
+
+# MacOS-specific files
+.DS_Store
+
+# IDE files
+.vscode/
+.idea/
+
+# OS-specific
+Thumbs.db
+.DS_Store
+
+# Temporary build files
+dist/
+build/
+
+# Git ignore itself (not tracked)
+.gitignore
