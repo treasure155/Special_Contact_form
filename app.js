@@ -3,10 +3,17 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const path = require('path');
 const Contact = require('./models/contact'); 
+require('dotenv').config();
+
+
 
 const app = express();
 
-mongoose.connect('mongodb://localhost:27017/contactFormClass');
+mongoose.connect(process.env.MONGODB_URI).then(() => {
+  console.log('Connected to MongoDB');
+}).catch((err) => {
+  console.error('MongoDB connection error:', err);
+});
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
